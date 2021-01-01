@@ -6,11 +6,11 @@ set -e
 # build
 npm run build
 
-cp -r ./dist/* ./pandyasdhaval.github.io/
+cp -r ./dist/* ./../pandyasdhaval.github.io_DEPLOY/pandyasdhaval.github.io/
 
 # navigate into the build output directory
 # cd dist
-cd pandyasdhaval.github.io
+cd ./../pandyasdhaval.github.io_DEPLOY/pandyasdhaval.github.io/
 
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
