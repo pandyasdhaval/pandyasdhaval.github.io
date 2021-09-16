@@ -27,7 +27,7 @@
                 
                 <v-card-actions class="justify-space-around">
                     <a v-for="company in coop.companies" v-on:click.prevent v-bind:key="coop.term_number + coop.time_from + coop.time_to + company.name" :href="company.link">
-                        <v-img :src="company.logo" height="100px" width="100px"></v-img>
+                        <v-img :src="company.logo" height="100px" width="100px" contain></v-img>
                     </a>
                 </v-card-actions>
             </v-card>
@@ -109,14 +109,42 @@ export default {
             {
                 term_number: 3,
                 companies: [
+                    {
+                        name: 'onsemi',
+                        logo: require('../assets/Co-op_Experience/onsemi_logo_full_color.svg'),
+                        link: 'https://www.onsemi.com/'
+                    }
+                ],
+                company_place_info: {
+                    name: 'onsemi',
+                    link: 'https://www.onsemi.com/company/about-onsemi'
+                },
+                position: 'Software Tools Developer',
+                time_from: 'May 2021',
+                time_to: 'Aug 2021', 
+                image: require('../assets/Co-op_Experience/thumbnail/Dhaval_Term3.jpg'),
+                description_short: [
+                    "Worked in an agile environment with a large, independent team",
+                    "Developed plugins for the Eclipse IDE",
+                    "Performed manual tests on sample code",
+                    "Used logic analyzer to debug and understand sample codes involving UART and SPI protocols",
+                    "Improved customer facing document, like Getting Started Guide",
+                    "Improved documentation using Doxygen"
+                ],
+                full_description_route: '/co-op_experience/wt3',
+                disabled: false
+            },
+            {
+                term_number: 4,
+                companies: [
                 ],
                 position: "I'm looking for work!",
-                time_from: 'May 2021',
-                time_to: 'Aug 2021 (4 months)',
+                time_from: 'Jan 2022',
+                time_to: 'Apr 2022 (4 months)',
                 image: require('../assets/Co-op_Experience/coming_soon_dark.svg'),
                 description_short: [
-                    "I can work remote. Both my previous co-op terms required independent work with little supervision while Working From Home",
-                    "I'm curious to learn more about security. I've worked with Wireshark, and Burp Suite tools, and have experimented with MITM attacks, SQL injection, rate limiting flaws through my work term and on my school projects.",
+                    "I can work remote. All my previous co-op terms required independent work with little supervision while Working From Home",
+                    "I'm curious to learn more about firmware developemnt and systems close to hardware. I've gained experience in C while utilizing & debugging protocols like UART, SPI on logic analyzer",
                     "I'm curious & open to different learning opportunities. While gathering requirements for plant data during work-term #2, I spent personal time learning about basics of genomics study (as the researchers were analyzing Soybean genomic data)",
                     "I've developed full-stack projects like Elora Dairy Portal, SVG site (Software Systems Development and Integration course)",
                     "I'm passionate about technology. I want to create products that enable people to do things in better ways."
