@@ -137,20 +137,53 @@ export default {
             {
                 term_number: 4,
                 companies: [
+                    {
+                        name: 'Caseware',
+                        logo: require('../assets/Co-op_Experience/onsemi_logo_full_color.svg'), // TODO: change
+                        link: 'https://www.caseware.com/'
+                    }
                 ],
-                position: "I'm looking for work!",
+                company_place_info: {
+                    name: 'Caseware',
+                    link: 'https://www.caseware.com/'
+                },
+                position: "Software Development Engineer in Test",
                 time_from: 'Jan 2022',
-                time_to: 'Apr 2022 (4 months)',
-                image: require('../assets/Co-op_Experience/coming_soon_dark.svg'),
+                time_to: 'Apr 2022',
+                image: require('../assets/Co-op_Experience/coming_soon_dark.svg'), // TODO: update
                 description_short: [
-                    "I can work remote. All my previous co-op terms required independent work with little supervision while Working From Home",
-                    "I'm curious to learn more about firmware developemnt and systems close to hardware. I've gained experience in C while utilizing & debugging protocols like UART, SPI on logic analyzer",
-                    "I'm curious & open to different learning opportunities. While gathering requirements for plant data during work-term #2, I spent personal time learning about basics of genomics study (as the researchers were analyzing Soybean genomic data)",
-                    "I've developed full-stack projects like Elora Dairy Portal, SVG site (Software Systems Development and Integration course)",
-                    "I'm passionate about technology. I want to create products that enable people to do things in better ways."
+                    "Worked in an agile environment with a large, independent team",
+                    "Understood tests written in Protractor and migrated to Cypress",
+                    "Suggested Quality of Life changes for the Caseware Cloud product",
+                    "Helped with regression testing of US Review product",
                 ],
-                full_description_route: '',
-                disabled: true
+                full_description_route: '/co-op_experience/wt4',
+                disabled: false
+            },
+            {
+                term_number: 5,
+                companies: [
+                    {
+                        name: 'Caseware',
+                        logo: require('../assets/Co-op_Experience/onsemi_logo_full_color.svg'), // TODO: change
+                        link: 'https://www.caseware.com/'
+                    }
+                ],
+                company_place_info: {
+                    name: 'Caseware',
+                    link: 'https://www.caseware.com/'
+                },
+                position: "Software Development Engineer in Test",
+                time_from: 'May 2022',
+                time_to: 'Aug 2022',
+                image: require('../assets/Co-op_Experience/coming_soon_dark.svg'), // TODO: update
+                description_short: [
+                    "Identified and documented code smells in automated testing infrastructure",
+                    "Understood Cypress testing methodology and fixed flaky test suites",
+                    "Lead summarizing effort for CWX (Caseware rebranding) event for the QA team"
+                ], // TODO: Update
+                full_description_route: '/co-op_experience/wt5',
+                disabled: false
             }
         ]
     })
