@@ -39,6 +39,16 @@ const routes = [
     component: () => import('../views/wt3.vue')
   },
   {
+    path: '/co-op_experience/wt4',
+    name: 'wt4',
+    component: () => import('../views/wt4.vue')
+  },
+  {
+    path: '/co-op_experience/wt5',
+    name: 'wt5',
+    component: () => import('../views/wt5.vue')
+  },
+  {
     path: '*',
     name: '404',
     component: () => import('../views/404.vue')
