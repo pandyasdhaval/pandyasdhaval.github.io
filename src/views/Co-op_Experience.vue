@@ -27,7 +27,8 @@
                 
                 <v-card-actions class="justify-space-around">
                     <a v-for="company in coop.companies" v-on:click.prevent v-bind:key="coop.term_number + coop.time_from + coop.time_to + company.name" :href="company.link">
-                        <v-img :src="company.logo" height="100px" width="100px"></v-img>
+                        <!-- Add a logic to switch between dark and light logos  --> 
+                        <v-img :src="company.logo" height="100px" width="100px" contain></v-img>
                     </a>
                 </v-card-actions>
             </v-card>
@@ -109,20 +110,85 @@ export default {
             {
                 term_number: 3,
                 companies: [
+                    {
+                        name: 'onsemi',
+                        logo: require('../assets/Co-op_Experience/onsemi_logo_full_color.svg'),
+                        link: 'https://www.onsemi.com/'
+                    }
                 ],
-                position: "I'm looking for work!",
+                company_place_info: {
+                    name: 'onsemi',
+                    link: 'https://www.onsemi.com/company/about-onsemi'
+                },
+                position: 'Software Tools Developer',
                 time_from: 'May 2021',
-                time_to: 'Aug 2021 (4 months)',
-                image: require('../assets/Co-op_Experience/coming_soon_dark.svg'),
+                time_to: 'Aug 2021', 
+                image: require('../assets/Co-op_Experience/thumbnail/Dhaval_Term3.jpg'),
                 description_short: [
-                    "I can work remote. Both my previous co-op terms required independent work with little supervision while Working From Home",
-                    "I'm curious to learn more about security. I've worked with Wireshark, and Burp Suite tools, and have experimented with MITM attacks, SQL injection, rate limiting flaws through my work term and on my school projects.",
-                    "I'm curious & open to different learning opportunities. While gathering requirements for plant data during work-term #2, I spent personal time learning about basics of genomics study (as the researchers were analyzing Soybean genomic data)",
-                    "I've developed full-stack projects like Elora Dairy Portal, SVG site (Software Systems Development and Integration course)",
-                    "I'm passionate about technology. I want to create products that enable people to do things in better ways."
+                    "Worked in an agile environment with a large, independent team",
+                    "Developed plugins for the Eclipse IDE",
+                    "Performed manual tests on sample code",
+                    "Used logic analyzer to debug and understand sample codes involving UART and SPI protocols",
+                    "Improved customer facing document, like Getting Started Guide",
+                    "Improved documentation using Doxygen"
                 ],
-                full_description_route: '',
-                disabled: true
+                full_description_route: '/co-op_experience/wt3',
+                disabled: false
+            },
+            {
+                term_number: 4,
+                companies: [
+                    {
+                        name: 'Caseware',
+                        logo: require('../assets/Co-op_Experience/CaseWare-Logo-RGB-Primary_Dark-TM.svg'), // TODO: change
+                        link: 'https://www.caseware.com/'
+                    }
+                ],
+                company_place_info: {
+                    name: 'Caseware',
+                    link: 'https://www.caseware.com/'
+                },
+                position: "Software Development Engineer in Test",
+                time_from: 'Jan 2022',
+                time_to: 'Apr 2022',
+                image: require('../assets/Co-op_Experience/thumbnail/Dhaval_Term4.jpg'), // TODO: update
+                description_short: [
+                    "Worked in an agile environment with a large, independent team",
+                    "Migrated tests from Protractor to Cypress",
+                    "Performed daily automation maintenance",
+                    "Helped perform manual regression testing",
+                    "Suggested Quality of Life changes",
+                ],
+                full_description_route: '/co-op_experience/wt4',
+                disabled: false
+            },
+            {
+                term_number: 5,
+                companies: [
+                    {
+                        name: 'Caseware',
+                        logo: require('../assets/Co-op_Experience/CaseWare-Logo-RGB-Primary_Dark-TM.svg'), // TODO: change
+                        link: 'https://www.caseware.com/'
+                    }
+                ],
+                company_place_info: {
+                    name: 'Caseware',
+                    link: 'https://www.caseware.com/'
+                },
+                position: "Software Development Engineer in Test",
+                time_from: 'May 2022',
+                time_to: 'Aug 2022',
+                image: require('../assets/Co-op_Experience/thumbnail/Dhaval_Term5_1.jpg'), // TODO: update
+                description_short: [
+                    "Designed, implemented and executed automated tests across the suite of CaseWare products",
+                    "Identified code smells in automated test infrastructure",
+                    "Promoted Cypress testing methodology to fix flaky tests",
+                    "Summarized CWX (Caseware rebranding) event for the QA team",
+                    "Performed daily automation maintenance",
+                    "Helped perform manual and automated regression testing"
+                ], // TODO: Update
+                full_description_route: '/co-op_experience/wt5',
+                disabled: false
             }
         ]
     })
