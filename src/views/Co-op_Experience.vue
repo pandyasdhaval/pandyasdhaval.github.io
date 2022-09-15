@@ -27,6 +27,7 @@
                 
                 <v-card-actions class="justify-space-around">
                     <a v-for="company in coop.companies" v-on:click.prevent v-bind:key="coop.term_number + coop.time_from + coop.time_to + company.name" :href="company.link">
+                        <!-- Add a logic to switch between dark and light logos  --> 
                         <v-img :src="company.logo" height="100px" width="100px" contain></v-img>
                     </a>
                 </v-card-actions>
@@ -139,7 +140,7 @@ export default {
                 companies: [
                     {
                         name: 'Caseware',
-                        logo: require('../assets/Co-op_Experience/onsemi_logo_full_color.svg'), // TODO: change
+                        logo: require('../assets/Co-op_Experience/CaseWare-Logo-RGB-Primary_Dark-TM.svg'), // TODO: change
                         link: 'https://www.caseware.com/'
                     }
                 ],
@@ -150,12 +151,13 @@ export default {
                 position: "Software Development Engineer in Test",
                 time_from: 'Jan 2022',
                 time_to: 'Apr 2022',
-                image: require('../assets/Co-op_Experience/coming_soon_dark.svg'), // TODO: update
+                image: require('../assets/Co-op_Experience/thumbnail/Dhaval_Term4.jpg'), // TODO: update
                 description_short: [
                     "Worked in an agile environment with a large, independent team",
-                    "Understood tests written in Protractor and migrated to Cypress",
-                    "Suggested Quality of Life changes for the Caseware Cloud product",
-                    "Helped with regression testing of US Review product",
+                    "Migrated tests from Protractor to Cypress",
+                    "Performed daily automation maintenance",
+                    "Helped perform manual regression testing",
+                    "Suggested Quality of Life changes",
                 ],
                 full_description_route: '/co-op_experience/wt4',
                 disabled: false
@@ -165,7 +167,7 @@ export default {
                 companies: [
                     {
                         name: 'Caseware',
-                        logo: require('../assets/Co-op_Experience/onsemi_logo_full_color.svg'), // TODO: change
+                        logo: require('../assets/Co-op_Experience/CaseWare-Logo-RGB-Primary_Dark-TM.svg'), // TODO: change
                         link: 'https://www.caseware.com/'
                     }
                 ],
@@ -176,11 +178,14 @@ export default {
                 position: "Software Development Engineer in Test",
                 time_from: 'May 2022',
                 time_to: 'Aug 2022',
-                image: require('../assets/Co-op_Experience/coming_soon_dark.svg'), // TODO: update
+                image: require('../assets/Co-op_Experience/thumbnail/Dhaval_Term5_1.jpg'), // TODO: update
                 description_short: [
-                    "Identified and documented code smells in automated testing infrastructure",
-                    "Understood Cypress testing methodology and fixed flaky test suites",
-                    "Lead summarizing effort for CWX (Caseware rebranding) event for the QA team"
+                    "Designed, implemented and executed automated tests across the suite of CaseWare products",
+                    "Identified code smells in automated test infrastructure",
+                    "Promoted Cypress testing methodology to fix flaky tests",
+                    "Summarized CWX (Caseware rebranding) event for the QA team",
+                    "Performed daily automation maintenance",
+                    "Helped perform manual and automated regression testing"
                 ], // TODO: Update
                 full_description_route: '/co-op_experience/wt5',
                 disabled: false
